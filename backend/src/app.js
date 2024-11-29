@@ -13,7 +13,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://theta-konnect.vercel.app/",
+    origin: "https://theta-konnect.vercel.app",
     credentials: true,
   })
 );
