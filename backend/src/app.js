@@ -14,6 +14,7 @@ const app = express();
 app.use(
   cors({
     origin: "https://theta-konnect.vercel.app",
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
   })
 );
