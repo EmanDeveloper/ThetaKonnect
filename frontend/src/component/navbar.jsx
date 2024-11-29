@@ -12,7 +12,7 @@ function Navbar() {
 
   const checkLogin = async () => {
     try {
-     await axios.get("http://localhost:3000/user/navlogin", {
+     await axios.get("https://thetakonnect.vercel.app/user/navlogin", {
         withCredentials: true,
       });
       setIsLoggedIn(true); 
@@ -24,7 +24,7 @@ function Navbar() {
  async function logout() {
   console.log(10)
     try {
-      let re=await axios.get("http://localhost:3000/user/userlogout", { withCredentials: true });
+      let re=await axios.get("https://thetakonnect.vercel.app/user/userlogout", { withCredentials: true });
       console.log(re)
       setIsLoggedIn(false);
       toast.success("Logged out successfully");

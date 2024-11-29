@@ -57,7 +57,7 @@ function AddProject() {
 
       // Send request
       const response = await axios.post(
-        `http://localhost:3000/project/add/${profile._id}`,
+        `https://thetakonnect.vercel.app/project/add/${profile._id}`,
         formData,
         { withCredentials: true }
       );

@@ -39,7 +39,7 @@ function Show() {
       try {
         const profileId = profile ? profile._id : id;
         const response = await axios.get(
-          `http://localhost:3000/profile/show/${profileId}`,{withCredentials:true}
+          `https://thetakonnect.vercel.app/profile/show/${profileId}`,{withCredentials:true}
         );
         console.log("12",response.data);
         setOwner(response.data.message)
@@ -60,7 +60,7 @@ function Show() {
 
   async function handelProfileDelete() {
     const profileId = profile ? profile._id : id;
-    await axios.delete(`http://localhost:3000/profile/delete/${profileId}`);
+    await axios.delete(`https://thetakonnect.vercel.app/profile/delete/${profileId}`);
     navigate("/", { state: { toastMessage: "Profile deleted!" } });
   }
 
@@ -77,7 +77,7 @@ function Show() {
   async function deleteProject() {
     try {
       const profileId = profile ? profile._id : id;
-      await axios.delete(`http://localhost:3000/project/delete/${projectToDelete}/${profileId}`);
+      await axios.delete(`https://thetakonnect.vercel.app/project/delete/${projectToDelete}/${profileId}`);
       setProject(project.filter((p) => p._id !== projectToDelete)); // Remove project from state
       setDel(false);
       setProjectToDelete(null);

@@ -61,7 +61,7 @@ function Create() {
     if (coverImage) formData.append("coverImage", coverImage);
 
     try {
-      await axios.post("http://localhost:3000/profile/create", formData, {
+      await axios.post("https://thetakonnect.vercel.app/profile/create", formData, {
         withCredentials: true,
       });
       navigate("/", {

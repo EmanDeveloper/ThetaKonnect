@@ -31,7 +31,7 @@ function Signup() {
         }
 
         try {
-            let response = await axios.post(`http://localhost:3000/user/signup`, signup,{withCredentials:true});
+            let response = await axios.post(`https://thetakonnect.vercel.app/user/signup`, signup,{withCredentials:true});
             console.log(response);
             navigate(`/login`, { state: { toastMessage: 'User was register successfully!'}});
         } catch (err) {

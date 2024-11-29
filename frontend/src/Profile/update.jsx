@@ -73,7 +73,7 @@ function Update() {
 
       // Make the PUT request
       await axios.put(
-        `http://localhost:3000/profile/update/${edit._id}`,
+        `https://thetakonnect.vercel.app/profile/update/${edit._id}`,
         formData,
         { withCredentials: true }
       );

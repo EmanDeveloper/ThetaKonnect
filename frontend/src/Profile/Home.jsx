@@ -21,7 +21,7 @@ function AllProfile() {
 
   useEffect(() => {
     async function profile() {
-      let response = await axios.get("http://localhost:3000/profile",{ withCredentials: true });
+      let response = await axios.get("https://thetakonnect.vercel.app/profile",{ withCredentials: true });
       setData(response.data.data);
     }
     profile();
