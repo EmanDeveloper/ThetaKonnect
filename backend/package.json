@@ -1,5 +1,5 @@
 {
-  "engines": {"node": "21.7.1"},
+  "engines": {"node": "22.11.0"},
   "name": "backend",
   "version": "1.0.0",
   "main": "src/index.js",
