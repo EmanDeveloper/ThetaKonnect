@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+textarea {
+  background-color: rgba(115, 115, 115, 0.372);
+}
+.body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* overflow: hidden; */
+}
+.showImages {
+  position: relative;
+  height: 40vh;
+}
+
+.show-coverImage {
+  height: 40vh;
+  overflow: hidden;
+}
+
+.show-Avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -75px;
+  left: 5%;
+  border: 4px solid white;
+}
+.form-bg {
+  background: rgba(255, 255, 255, 0.089);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.018);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.331);
+}
+
+.form-bg-img {
+    position: relative;
+    width: 100%; /* Ensures full width */
+    height: 100vh; /* Ensures full height for background */
+    margin: 0%;
+    padding: 0%;
+}
+  
+  .form-bg-img::before {
+    content: "";
+    background: url("https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg") 
+      no-repeat center center / cover;
+    opacity: 0.7; /* Apply opacity to the background image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Keep the image behind other content */
+  }
+  
