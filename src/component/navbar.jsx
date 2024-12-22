@@ -12,7 +12,7 @@ function Navbar() {
 
   const checkLogin = async () => {
     try {
-    let response=await axios.get("https://thetakonnectbackend.onrender.com/user/navLogin");
+    await axios.get("https://thetakonnectbackend.onrender.com/user/navLogin");
       setIsLoggedIn(true); 
     } catch (error) {
       setIsLoggedIn(false); 
@@ -21,7 +21,7 @@ function Navbar() {
 
  async function logout() {
     try {
-      let re=await axios.get("https://thetakonnectbackend.onrender.com/user/userlogout", { withCredentials: true });
+      await axios.get("https://thetakonnectbackend.onrender.com/user/userlogout", { withCredentials: true });
       setIsLoggedIn(false);
       toast.success("Logged out successfully");
       navigate("/",{ replace: true } )
