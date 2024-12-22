@@ -33,7 +33,7 @@ function Signup() {
         try {
             let response = await axios.post(`https://thetakonnectbackend.onrender.com/user/signup`, signup,{withCredentials:true});
             console.log(response);
-            navigate(`/login`, { state: { toastMessage: 'User was register successfully!'}});
+            navigate(`/`);
         } catch (err) {
             toast.error(err.response.data.message);
         }
