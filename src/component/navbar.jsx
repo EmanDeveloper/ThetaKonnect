@@ -22,7 +22,6 @@ function Navbar() {
  async function logout() {
     try {
       let re=await axios.get("https://thetakonnectbackend.onrender.com/user/userlogout", { withCredentials: true });
-      console.log(re)
       setIsLoggedIn(false);
       toast.success("Logged out successfully");
       navigate("/",{ replace: true } )
